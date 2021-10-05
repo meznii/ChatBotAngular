@@ -1,0 +1,56 @@
+<!--<h1>🤔🤨🤔🤔</h1>-->
+<div id="root">
+  <div id="app-container">
+    <div class="convo-container">
+      <div *ngIf="activatelien">
+        <div class="bot-message-container" id="Lien">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>Merci de consulter ce lien </h1>
+            <br>
+            <a href="http://www.comunikcrm.com/" target="_blank">http://www.comunikcrm.com/</a>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="lienBloc">
+          <button type="button" class="btn btn-outline-primary" (click)="problemLien('lienBloc', 'Lien')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonLien('lienBloc', 'Lien')">résolut
+          </button>
+        </div>
+      </div>
+
+
+      <div *ngIf="activateVerivication">
+        <div class="bot-message-container" id="verification">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Vérifier bien que qu’il y a Un commercial affecté Au fichier
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="verificationBloc">
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="problemVerification('verificationBloc', 'verification')">
+            bien affecté
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonVerification('verificationBloc', 'verification')">Non
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

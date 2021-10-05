@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div style="margin-top: 40px">
+      <button type="button" class="btn btn-outline-primary embauche " (click)="selectItem('Problème de son')">
+        <span>Problème de son</span>
+      </button>
+      <button type="button" class="btn btn-outline-primary embauche "
+              (click)="selectItem('coupure d\'appel')">
+        <span>coupure d'appel</span>
+      </button>
+      <button type="button" class="btn btn-outline-primary embauche "
+              (click)="selectItem('connexion echouée')">
+        <span>connexion echouée</span>
+      </button>
+      <br>
+    </div>
+  </div>
+  <div>
+    <div class="row" *ngIf="isActivate" style="padding: 10px; margin-top: 30px">
+      <app-vice-items></app-vice-items>
+    </div>
+  </div>
+</div>

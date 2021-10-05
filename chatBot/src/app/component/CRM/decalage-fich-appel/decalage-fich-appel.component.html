@@ -1,0 +1,54 @@
+<!--<h1>🤔🤨🤔🤔</h1>-->
+<div id="root">
+  <div id="app-container">
+    <div class="convo-container">
+      <div *ngIf="activateTouAg">
+        <div class="bot-message-container" id="TsAg">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Chez tous les agents ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocTsAg">
+          <button type="button" class="btn btn-outline-primary" (click)="problemTsAg('blocTsAg', 'TsAg')">
+            Oui
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary" (click)="nonTsAg('blocTsAg', 'TsAg')">
+            Non
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateVerCnx">
+        <div class="bot-message-container" id="VerCnx">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Vérifier la connexion internet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocVerCnx">
+          <button type="button" class="btn btn-outline-primary" (click)="problemVerCnx('blocVerCnx', 'VerCnx')">
+            Oui
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary" (click)="nonVerCnx('blocVerCnx', 'VerCnx')">
+            Non
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

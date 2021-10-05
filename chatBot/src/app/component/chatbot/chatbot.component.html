@@ -1,0 +1,71 @@
+<button class="chatbox-open" (click)="agrandirMin()">
+  <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+</button>
+<button class="chatbox-close" (click)="fermer()" [ngStyle]="{'display': close}">
+  <i class="fa fa-times" aria-hidden="true" style="font-size:36px"></i>
+</button>
+
+<section class="chatbox-popup" [ngStyle]="{'display': block}">
+  <header class="chatbox-popup__header">
+    <aside style="flex:3">
+      <img src="assets/images/téléchargement.jpg" alt="avatar" class="avatar rounded-circle mr-2 ml-lg-3 ml-0 z-depth-1"
+           style="max-width: 50px; max-height: 50px;">
+      <!--      <i class='fas fa-robot  fa-4x chatbox-popup__avatar' style='font-size:36px'></i>-->
+    </aside>
+    <aside style="flex:8;">
+      <h3>Comunik Bot</h3>
+      <!--      <img src="assets/images/logo.jpg" class="card-img-bottom">-->
+    </aside>
+
+    <aside style="flex:1">
+      <button class="chatbox-maximize" (click)="agrandirMax()"><i class="fa fa-window-maximize" aria-hidden="true"></i>
+      </button>
+    </aside>
+  </header>
+  <main class="chatbox-popup__main">
+    <b> bienvenu ,
+      Si vous avez un problème de CRM , Voix ou bien Billing.
+      <br>
+      Bah nous sommes là pour les résoudre ensemble, juste choisissiez vous un probléme et Comunik Bot va le résoudre ?
+    </b>
+  </main>
+</section>
+
+<section class="chatbox-panel" [ngStyle]="{'display': flex}">
+  <header class="chatbox-panel__header">
+    <aside style="flex:3">
+      <img src="assets/images/téléchargement.jpg" alt="avatar" class="avatar rounded-circle mr-2 ml-lg-3 ml-0 z-depth-1"
+           style="max-width: 50px; max-height: 50px;">
+
+      <!--      <i class='fas fa-robot  fa-4x chatbox-popup__avatar' style='font-size:36px'></i>-->
+    </aside>
+    <aside style="flex:6">
+      <h3>Comunik Bot</h3>
+      <!--      <img src="assets/images/logo.jpg">-->
+    </aside>
+    <aside style="flex:3;text-align:right;">
+      <button class="chatbox-minimize" (click)="agrandirMin()">
+        <i class="fa fa-window-restore" aria-hidden="true"></i>
+      </button>
+      <button class="chatbox-panel-close" (click)="fermer()">
+        <i class="fa fa-window-close" aria-hidden="true" style="size: A5; margin-left: 10px"></i>
+      </button>
+    </aside>
+  </header>
+  <main class="chatbox-panel__main" style="flex:1">
+    <b>
+      bienvenu, Si vous avez un problème de CRM , Voix ou bien Billing ...
+      <br>
+      Bah nous sommes là pour les résoudre ensemble, juste choisissiez vous un probléme et Comunik Bot va le résoudre ??
+    </b>
+    <!-- main  chat -->
+    <div class="chatbox" style="margin-bottom: auto">
+      <div class="chat-messages" >
+        <app-type-problem></app-type-problem>
+        <app-cr-voi-billing></app-cr-voi-billing>
+      </div>
+
+    </div>
+    <!-- end main chat -->
+  </main>
+</section>

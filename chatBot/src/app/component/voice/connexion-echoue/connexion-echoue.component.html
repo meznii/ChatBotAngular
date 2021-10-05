@@ -1,0 +1,79 @@
+<!--<h1>🤔🤨🤔🤔</h1>-->
+<div id="root">
+  <div id="app-container">
+    <div class="convo-container">
+      <div *ngIf="activateCnrNum">
+        <div class="bot-message-container" id="CrnNum">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              ça concerne tous les numéros? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocCrnNum">
+          <button type="button" class="btn btn-outline-primary" (click)="problemNum('blocCrnNum', 'CrnNum')">
+            Oui
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary" (click)="nonNum('blocCrnNum', 'CrnNum')">
+            Non
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activVerCnx">
+        <div class="bot-message-container" id="VerfiCnx">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Merci de vérifier l'etat de votre connexion internet? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocVerfiCnx">
+          <button type="button" class="btn btn-outline-primary" (click)="problemVerCnx('blocVerfiCnx', 'VerfiCnx')">
+            Bon
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary" (click)="nonVerCnx('blocVerfiCnx', 'VerfiCnx')">
+            Mauvais
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateRdmrCnx">
+        <div class="bot-message-container" id="RdmrCnx">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Redémarrer votre connexion internet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocRdmrCnx">
+          <button type="button" class="btn btn-outline-primary" (click)="problemRdmrCnx('blocRdmrCnx', 'RdmrCnx')">
+            Oui
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary" (click)="nonRdmrCnx('blocRdmrCnx', 'RdmrCnx')">
+            Non
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

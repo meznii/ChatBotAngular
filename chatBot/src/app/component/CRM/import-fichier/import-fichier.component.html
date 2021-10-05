@@ -1,0 +1,127 @@
+<!--<h1>🤔🤨🤔🤔</h1>-->
+<div id="root">
+  <div id="app-container">
+    <div class="convo-container">
+
+      <div *ngIf="activateFormat">
+        <div class="bot-message-container" id="format">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>Changer le format en xlsx ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocFormat">
+          <button type="button" class="btn btn-outline-primary" (click)="problemFormat('blocFormat', 'format')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonFormat('blocFormat', 'format')">résolut
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateVerifierFormat">
+        <div class="bot-message-container" id="Verifformat">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>Verifiez l'extension de votre fichier (xls, csv, xlsx) ?</h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocVerifformat">
+          <button type="button" class="btn btn-outline-primary" (click)="problemVerifierFormat('blocVerifformat', 'Verifformat')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonVerifierFormat('blocVerifformat', 'Verifformat')">résolut
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateCaract">
+        <div class="bot-message-container" id="caractere">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Enelever les caractères spéciaux ?
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocCaractere">
+          <button type="button" class="btn btn-outline-primary" (click)="problemCaract('blocCaractere', 'caractere')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonCaract('blocCaractere','caractere')">résolut
+          </button>
+        </div>
+      </div>
+
+
+      <div *ngIf="activateChangNav">
+        <div class="bot-message-container" id="changnav">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Changer de navigateur
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocchangnav">
+          <button type="button" class="btn btn-outline-primary" (click)="problemChangNav('blocchangnav', 'changnav')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonChangNav('blocchangnav', 'changnav')">résolut
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateTest">
+        <div class="bot-message-container" id="tester">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>
+              Tester avec un autre fichier
+            </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="testBloc">
+          <button type="button" class="btn btn-outline-primary" (click)="problemTest('testBloc', 'tester')">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonTest('testBloc', 'tester')">résolut
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

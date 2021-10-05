@@ -1,0 +1,56 @@
+<!--<h1>🤔🤨🤔🤔</h1>-->
+<div id="root">
+  <div id="app-container">
+    <div class="convo-container">
+      <div *ngIf="activatelien">
+        <div class="bot-message-container" id="lien">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>Merci de consulter ce lien </h1>
+            <br>
+            <a href="http://www.comunikcrm.com/" target="_blank">
+              http://www.comunikcrm.com/
+            </a>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocLien">
+          <button type="button" class="btn btn-outline-primary" (click)="problemLien('blocLien', 'lien' )">
+            persiste
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonLien('blocLien', 'lien')">résolut
+          </button>
+        </div>
+      </div>
+
+      <div *ngIf="activateAcGrp">
+        <div class="bot-message-container" id="activiteGrp">
+          <div class="img-avatar-container">
+            <img class="bot-avatar"
+                 src="assets/images/téléchargement.jpg"
+                 alt="bot avatar">
+          </div>
+          <div class="chat-bubble bot">
+            <h1>Activé callblinding groupe d’agent </h1>
+          </div>
+        </div>
+        <div class="bot-message-container" style="margin-left: 100px" id="blocAcGr">
+          <button type="button" class="btn btn-outline-primary" (click)="problemTAcGr('blocAcGr', 'activiteGrp')">
+            Oui
+          </button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-outline-primary"
+                  (click)="nonAcGr('blocAcGr', 'activiteGrp')">Non
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
